@@ -1,71 +1,50 @@
-# nl-command-runner README
+Prerequisites for macOS
+✅ Install Node.js + npm : brew install node
+✅ Install Yeoman + VS Code Extension Generator : npm install -g yo generator-code
+Install vs code
 
-This is the README for your extension "nl-command-runner". After writing up a brief description, we recommend including the following sections.
+******************************************
 
-## Features
+Step-by-Step Guide (macOS-Friendly)
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+Step 1: Create the Extension
+1. Open your terminal (iTerm or default macOS Terminal).
+2. Run: yo code
+3. When prompted:
 
-For example if there is an image subfolder under your extension project workspace:
+Prompt	Your Answer
+What type of extension?	New Extension (TypeScript)
+Name?	nl-command-runner
+Display name?	Natural Command Runner
+Description?	Run dev commands using natural language
+Enable Git?	Yes or No (your choice)
+Package manager?	npm
 
-\!\[feature X\]\(images/feature-x.png\)
+4. Move into the new directory: cd nl-command-runner
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+*******************************************
 
-## Requirements
+Step 2: Add the Extension Logic
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+already added in src folder 
 
-## Extension Settings
+******************************************
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+Step 3: Register the Command
+In your package.json, find the "contributes" and "activationEvents" sections
 
-For example:
+*******************************************
 
-This extension contributes the following settings:
+Step 4: Install Dependencies & Build
+npm install
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+********************************************
+Step 5: Run Your Extension
+1. Press F5 in VS Code (this opens a new window: "Extension Development Host").
+2. In the new window, press Cmd + Shift + P → Type: Run Natural Dev Command
+3. In new window Type: create a git branch naming etbtests
 
-## Known Issues
+Now you will see the below commend has been triggered
+git checkout -b etbtests
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+*********************************************
